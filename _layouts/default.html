@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="sapslaj">
+
+    {% include stylesheets.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <div class="container">
+      <div class="row-md">
+        <section class="col-8">
+          {{ content }}
+        </section>
+        <aside class="col-4">
+          {% include sidebar.html %}
+        </aside>
+      </div>
+    </div>
+  </body>
+  {% include javascripts.html %}
+</html>

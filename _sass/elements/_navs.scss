@@ -1,0 +1,22 @@
+nav {
+  background-color: $nav-background-color;
+  padding: 30px;
+
+  h1 {
+    display: inline;
+  }
+
+  .nav-links {
+    display: inline;
+
+    li {
+      display: inline-block;
+      padding: 0 11px;
+      border-left: 1px solid #999;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

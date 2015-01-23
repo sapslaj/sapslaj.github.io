@@ -1,0 +1,106 @@
+// Sassy grid
+
+$column-number: 12;
+$sm-width: 750px;
+$md-width: 970px;
+$lg-width: 1170px;
+$pad: 10px;
+
+@mixin box-sized {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin cols($number_of_cols) {
+  @for $col_num from 1 through $number_of_cols {
+    .col-#{$col_num} {
+      width: percentage($col_num / $number_of_cols)
+    }
+  }
+}
+
+@mixin reset_cols {
+  [class*='col-'] {
+    width: 100%;
+  }
+}
+
+.container {
+  @include box-sized;
+  position: relative;
+  width: 100%;
+  max-width: $sm-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (min-width: $md-width + $pad) {
+    max-width: $md-width;
+  }
+
+  @media screen and (min-width: $lg-width + $pad) {
+    max-width: $lg-width;
+  }
+}
+
+.container-fluid {
+  @extend .container;
+  max-width: 100%;
+}
+
+.row {
+  @include box-sized;
+  @include reset_cols;
+  margin: 0 0 $pad 0;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.row-pad {
+  padding: $pad 0 $pad $pad;
+  [class*='col-']:last-of-type {
+    padding-right: $pad;
+  }
+}
+
+.row-xs {
+  @extend .row;
+  [class*='col-'] {
+    width: 100%;
+  }
+}
+
+.row-sm {
+  @extend .row;
+  @media screen and (min-width: $sm-width + $pad) {
+    @include cols($column-number);
+  }
+}
+
+.row-md {
+  @extend .row;
+  @media screen and (min-width: $md-width + $pad) {
+    @include cols($column-number);
+  }
+}
+
+.row-lg {
+  @extend .row;
+  @media screen and (min-width: $lg-width + $pad) {
+    @include cols($column-number);
+  }
+}
+
+[class*='col-'] {
+  @include box-sized;
+  float: left;
+  padding-right: $pad;
+
+  [class*='row'] &:last-of-type {
+    padding-right: 0;
+  }
+}
