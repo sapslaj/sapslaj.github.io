@@ -16,6 +16,17 @@ nav {
     }
   }
 
+  .social-media-links {
+    display: inline;
+    float: right;
+
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 1.2em;
+    }
+  }
+
   a {
     text-decoration: none;
   }

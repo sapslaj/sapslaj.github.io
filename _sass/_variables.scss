@@ -4,5 +4,8 @@ $site-font-size: 14px;
 $site-background-color: #fff;
 $site-text-color: #000;
 $site-link-color: #222;
+$site-link-hover-color: lighten($site-link-color, 50%);
+$site-link-text-decoration: underline;
+$site-link-hover-text-decoration: underline;
 
 $nav-background-color: #ddd;

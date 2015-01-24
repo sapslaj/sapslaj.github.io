@@ -4,7 +4,7 @@ $column-number: 12;
 $sm-width: 750px;
 $md-width: 970px;
 $lg-width: 1170px;
-$pad: 10px;
+$pad: 20px;
 
 @mixin box-sized {
   -webkit-box-sizing: border-box;

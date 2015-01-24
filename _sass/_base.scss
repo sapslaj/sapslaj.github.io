@@ -15,10 +15,10 @@ body {
 
 a {
   color: $site-link-color;
-  text-decoration: underline;
+  text-decoration: $site-link-text-decoration;
 
   &:hover {
-    color: lighten($site-link-color, 50%);
-    text-decoration: underline;
+    color: $site-link-hover-color;
+    text-decoration: $site-link-hover-text-decoration;
   }
 }
