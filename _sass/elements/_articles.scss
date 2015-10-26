@@ -1,10 +1,13 @@
 article {
   h2 {
     display: inline-block;
+    margin-bottom: 0.9rem;
   }
 
   .meta {
     float: right;
-    margin: 30px;
+    margin: 0 15px;
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
   }
 }

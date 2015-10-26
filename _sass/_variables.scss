@@ -1,11 +1,47 @@
-$site-font-family: 'IM Fell English', serif;
-$site-font-size: 14px;
+// ### General variables
 
-$site-background-color: #fff;
-$site-text-color: #000;
-$site-link-color: #222;
-$site-link-hover-color: lighten($site-link-color, 50%);
-$site-link-text-decoration: underline;
-$site-link-hover-text-decoration: underline;
+$header-font-family: 'IM Fell English', serif;
+$link-color: #222;
+$link-hover-color: lighten($link-color, 25%);
 
+// ### sanitize.css settings
+$root-background-color: #FFFFFF;
+$root-box-sizing: border-box;
+$root-color: #000000;
+$root-cursor: default;
+$root-font-family: 'Merriweather', serif;
+$root-font-size: 100%;
+$root-line-height: 1.5;
+$root-text-rendering: optimizeLegibility;
+
+$anchor-text-decoration: underline;
+$background-repeat: no-repeat;
+$form-element-background-color: transparent;
+$form-element-min-height: if(unitless($root-line-height), #{$root-line-height}em, if(unit($root-line-height) != '%', $root-line-height, null));
+$media-element-vertical-align: middle;
+$monospace-font-family: monospace;
+$nav-list-style: none;
+$selection-background-color: #B3D4FC;
+$selection-color: #ffffff;
+$selection-text-shadow: none;
+$small-font-size: 75%;
+$table-border-collapse: collapse;
+$table-border-spacing: 0;
+$textarea-resize: vertical;
+
+// ### GUFF settings
+
+$rem-base: 14px;
+$line-height-base: 26px;
+$type-rhythm-ratio: 1.14;
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 767px)";
+$grid-columns: 12;
+$grid-gutter: 20px;
+$grid-padding: 20px;
+$grid-max-width: 1024px;
+
+// ### Site-modules settings
+$nav-header-font-family: $header-font-family;
 $nav-background-color: #ddd;

@@ -1,24 +1,34 @@
+$nav-background-color: #ddd !default;
+$nav-link-spacer-color: #999 !default;
+
 nav {
   background-color: $nav-background-color;
   padding: 30px;
 
   h1 {
     display: inline;
+    padding-right: 11px;
+  }
+
+  .container {
+    margin: 0 auto;
   }
 
   .nav-links {
     display: inline;
+    margin: 0;
 
     li {
       display: inline-block;
       padding: 0 11px;
-      border-left: 1px solid #999;
+      border-left: 1px solid $nav-link-spacer-color;
     }
   }
 
   .social-media-links {
     display: inline;
     float: right;
+    margin: 0;
 
     li {
       display: inline-block;

@@ -18,14 +18,12 @@
   <body>
     {% include navbar.html %}
     <div class="container">
-      <div class="row-md">
-        <section class="col-8">
-          {{ content }}
-        </section>
-        <aside class="col-4">
-          {% include sidebar.html %}
-        </aside>
-      </div>
+      <main>
+        {{ content }}
+      </main>
+      <aside>
+        {% include sidebar.html %}
+      </aside>
     </div>
   </body>
   {% include javascripts.html %}

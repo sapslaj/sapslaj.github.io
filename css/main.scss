@@ -5,12 +5,67 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "variables";
-@import "base";
-@import "grid";
-@import "syntax-highlighting";
 
-@import "layout";
+@import "vendor/sanitize";
+@import "vendor/guff";
+
 @import "elements/navs";
 @import "elements/articles";
 @import "elements/asides";
 
+@import "syntax-highlighting";
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2.post-list-header {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+h1,
+h2 {
+  font-family: 'IM Fell English';
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.container {
+  @include container;
+  margin: 1rem auto;
+  padding: 0 1rem;
+
+  main {
+    @include col(8);
+    @include type;
+
+
+    p,
+    pre,
+    code,
+    .highlight {
+      margin-bottom: 1.5rem;
+      
+      pre,
+      code {
+        margin-bottom: 0;
+      }
+    }
+
+    .post-list-header {
+      border-bottom: 1px solid #aaa;
+    }
+  }
+
+  aside {
+    @include col(4);
+  }
+}
