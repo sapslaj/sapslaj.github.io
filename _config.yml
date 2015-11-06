@@ -8,10 +8,12 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sapslaj.github.io" # the base hostname & protocol for your site
 
 socialmedia:
-  twitter: sapslaj
-  github: sapslaj
-  youtube: sapslaj
-  trello: sapslaj
+  twitter: https://twitter.com/sapslaj
+  github: https://github.com/sapslaj
+  youtube: https://www.youtube.com/user/sapslaj
+  trello: https://trello.com/sapslaj
+  reddit: https://www.reddit.com/user/sapslaj
+  at: mailto:saps.laj@gmail.com
 
 # Default extension for new posts and pages
 post_ext: markdown
@@ -31,4 +33,5 @@ page_template: page
 draft_template: draft
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highlighter: pygments
