@@ -12,6 +12,7 @@
 @import "elements/navs";
 @import "elements/articles";
 @import "elements/asides";
+@import "elements/search";
 
 @import "syntax-highlighting";
 
@@ -53,7 +54,7 @@ a {
     code,
     .highlight {
       margin-bottom: 1.5rem;
-      
+
       pre,
       code {
         margin-bottom: 0;
