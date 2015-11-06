@@ -1,0 +1,20 @@
+---
+layout: null
+---
+
+[
+  {% for post in site.posts %}
+    {
+      "id": {{ post.id | jsonify }},
+      "title": {{ post.title | jsonify }},
+      "category": {{ post.category | jsonify}},
+      "tags": {{ post.tags | jsonify }},
+      "url": {{ post.url | jsonify }},
+      "date": {{ post.date | jsonify }},
+      "path": {{ post.path | jsonify }},
+      "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+      "body": {{ post.content | strip_html | jsonify }},
+      "content": {{ post.content | jsonify }}
+    }
+  {% endfor %}
+]
