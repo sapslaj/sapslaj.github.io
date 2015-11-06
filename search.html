@@ -1,0 +1,33 @@
+---
+layout: default
+permalink: /search/
+---
+
+<div class="search">
+  <span class="fa fa-search icon"></span>
+  <input type="search" class="search-query" data-bind="value: query" placeholder="Search" autocomplete="off">
+</div>
+
+<div class="search-results">
+  <h1>Search Results</h1>
+  <div class="search-results-list">
+
+  </div>
+</div>
+
+{% raw %}
+<script id="search-result-template" type="text/x-handlebars-template">
+  <article>
+    <header>
+  		<h2>
+        <a href="{{url}}">
+          {{{title}}}
+        </a>
+      </h2>
+    </header>
+    <section>
+      {{{excerpt}}}
+    </section>
+  </artcle>
+</script>
+{% endraw %}
