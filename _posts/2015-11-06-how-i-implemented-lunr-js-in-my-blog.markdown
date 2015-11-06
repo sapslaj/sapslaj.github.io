@@ -8,6 +8,7 @@ tags:
 - blog
 - tutorial
 - javascript
+- search
 ---
 
 As you probably are aware, this blog is hosted on GitHub pages and is powered by Jekyll. It provides an interesting challenge when dealing with dynamic content, such as search. Luckily, there is [lunr.js](http://lunrjs.com/), a client-side full text search engine. Sadly there isn't much _good_ documentation on how to implement it, so I'll just go over it quickly.
