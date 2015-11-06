@@ -56,7 +56,7 @@ layout: null
       "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
       "body": {{ post.content | strip_html | jsonify }},
       "content": {{ post.content | jsonify }}
-    }
+    }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
 {% endraw %}
@@ -139,3 +139,6 @@ $('.search-query').on('keyup', function (event) {
 {% endhighlight %}
 
 Congrats, you now have client side search on your Jekyll blog!
+
+#### EDIT: (later that very same day):
+I forgot to add in the comma in JSON. `{% unless forloop.last %},{% endunless %}`
