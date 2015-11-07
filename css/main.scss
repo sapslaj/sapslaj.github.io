@@ -44,10 +44,12 @@ a {
   margin: 1rem auto;
   padding: 0 1rem;
 
-  main {
-    @include col(8);
+  > main {
     @include type;
 
+    @include breakpoint($desktop) {
+      @include col(8);
+    }
 
     p,
     pre,
@@ -66,7 +68,9 @@ a {
     }
   }
 
-  aside {
-    @include col(4);
+  > aside {
+    @include breakpoint($desktop) {
+      @include col(4);
+    }
   }
 }
