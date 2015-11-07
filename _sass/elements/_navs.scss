@@ -1,5 +1,9 @@
 $nav-background-color: #ddd !default;
 $nav-link-spacer-color: #999 !default;
+$nav-collapse-button-background-color: inherit !default;
+$nav-collapse-button-hover-background-color: #fff !default;
+$nav-collapse-button-color: #999 !default;
+$nav-popup-background-color: darken($nav-background-color, 15%) !default;
 
 nav {
   background-color: $nav-background-color;
@@ -7,37 +11,146 @@ nav {
 
   h1 {
     display: inline;
-    padding-right: 11px;
+    padding-right: 0.75rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .container {
     margin: 0 auto;
   }
 
-  .nav-links {
-    display: inline;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      padding: 0 11px;
-      border-left: 1px solid $nav-link-spacer-color;
-    }
-  }
-
-  .social-media-links {
-    display: inline;
+  .collapsable-header {
     float: right;
-    margin: 0;
+    margin-right: 0.75rem;
+    border: 2px solid $nav-link-spacer-color;
+    color: $nav-collapse-button-color;
+    display: inline-block;
+    background-color: $nav-collapse-button-background-color;
 
-    li {
-      display: inline-block;
-      padding: 0 10px;
-      font-size: 1.2em;
+    @include breakpoint($desktop) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $nav-collapse-button-hover-background-color;
+      cursor: pointer;
     }
   }
 
-  a {
-    text-decoration: none;
+  .collapsable-content {
+    display: none;
+    position: absolute;
+    top: 96px;
+    right: 0;
+    background-color: $nav-popup-background-color;
+    height: 100%;
+    padding: 1rem 0.25rem;
+
+    .social-media-links {
+      display: table;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid $nav-link-spacer-color;
+
+      ul {
+        display: table-row;
+      }
+
+      li {
+        display: table-cell;
+        padding: 0 10px;
+        font-size: 1.2em;
+      }
+    }
+
+    .site-links {
+      ul {
+        padding: 0;
+      }
+
+      li {
+        display: block;
+        padding: 0 11px;
+        margin-top: 0.75rem;
+        width: 100%;
+
+        a {
+          display: block;
+          text-decoration: none;
+          width: 100%;
+
+          &:hover,
+          &:focus {
+            border-left: 2px solid $nav-link-spacer-color;
+            padding-left: 0.25rem;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($desktop) {
+      display: inline;
+      position: relative;
+      background-color: inherit;
+      height: 100%;
+      padding: 0;
+      top: 0;
+      left: 0;
+
+      .social-media-links {
+        display: table;
+        padding-bottom: 0;
+        border: 0;
+        float: right;
+        margin: 0.25rem 0 0;
+
+        ul {
+          display: table-row;
+        }
+
+        li {
+          display: table-cell;
+          padding: 0 10px;
+          font-size: 1.2em;
+        }
+      }
+
+      .site-links {
+        display: inline;
+
+        ul {
+          padding: 0;
+          margin-left: 2rem;
+          display: inline;
+        }
+
+        li {
+          display: inline-block;
+          padding: 0 11px;
+          margin-top: 0;
+          width: auto;
+          border-left: 1px solid $nav-link-spacer-color;
+
+          a {
+            display: block;
+            text-decoration: none;
+            width: 100%;
+
+            &:hover,
+            &:focus {
+              border-left: 0;
+              padding-left: 0;
+            }
+
+            .fa {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }

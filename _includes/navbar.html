@@ -1,19 +1,29 @@
 <nav>
-  <div class="container">
-    <ul class="social-media-links">
-      {% for service in site.socialmedia %}
-        <li><a href="{{ service[1] }}" target="_blank"><i class="fa fa-{{ service[0] }}"></i></a></li>
-      {% endfor %}
-    </ul>
+  <div class="container collapsable">
     <h1>
       <a href="/">
         {{ site.title }}
       </a>
     </h1>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/search">Search</a></li>
-    </ul>
+    
+    <div class="collapsable-content">
+      <div class="social-media-links">
+        <ul>
+          {% for service in site.socialmedia %}
+            <li><a href="{{ service[1] }}" target="_blank"><i class="fa fa-{{ service[0] }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="site-links">
+        <ul class="nav-links">
+          <li><a href="/"><i class="fa fa-home fa-fw"></i> Home</a></li>
+          <li><a href="/about"><i class="fa fa-question-circle fa-fw"></i> About</a></li>
+          <li><a href="/search"><i class="fa fa-search fa-fw"></i> Search</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="collapsable-header"><i class="fa fa-bars"></i></button>
   </div>
 </nav>
