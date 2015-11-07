@@ -69,8 +69,11 @@ a {
   }
 
   > aside {
+    border-top: 2px solid #999;
+
     @include breakpoint($desktop) {
       @include col(4);
+      border: 0;
     }
   }
 }
