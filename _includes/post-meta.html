@@ -1,0 +1,8 @@
+{% assign post = include.post %}
+{{ post.date | date: "%b %-d, %Y" }}
+{% if post.author %}
+  • {{ post.author }}
+{% endif %}
+{% if post.meta %}
+  • {{ post.meta }}
+{% endif %}

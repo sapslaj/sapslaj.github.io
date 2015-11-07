@@ -11,13 +11,7 @@ layout: default
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <div class="meta">
-          {{ post.date | date: "%b %-d, %Y" }}
-          {% if post.author %}
-            • {{ post.author }}
-          {% endif %}
-          {% if post.meta %}
-            • {{ post.meta }}
-          {% endif %}
+          {% include post-meta.html post=post %}
         </div>
       </header>
 			<section>
