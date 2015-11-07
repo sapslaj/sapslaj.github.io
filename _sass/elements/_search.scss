@@ -1,7 +1,7 @@
 .search {
   position: relative;
   display: flex;
-  width: 90%;
+  width: 95%;
   line-height: 1.5;
 
   @mixin border {
@@ -28,6 +28,12 @@
     @include border;
     border-right: 0;
     vertical-align: middle;
+
+    img {
+      margin-top: 0.25rem;
+      max-width: 1.5rem;
+      max-height: 1.5rem;
+    }
   }
 }
 
@@ -35,6 +41,7 @@
   h1 {
     margin-top: 1rem;
     border-bottom: 1px solid #555;
+    width: 95%;
   }
 
   .search-results-list {

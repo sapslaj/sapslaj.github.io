@@ -17,3 +17,5 @@ Glad you asked! Justing has done a bunch of stuff.
 
 ## About the blag
 Now, the interesting part: Jekyll site hosted on GitHub with custom skin. Search is client-side lunr.js. Octopress running under the hood.
+
+Some assets are provided by [W3 Creative Lab](http://w3creativelab.com/).
