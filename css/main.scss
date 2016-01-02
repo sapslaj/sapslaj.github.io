@@ -50,9 +50,14 @@ a {
 }
 
 .container {
-  @include container;
+  width: 100%;
   margin: 1rem auto;
   padding: 0 1rem;
+  @include clear;
+
+  @include breakpoint($desktop) {
+    width: 85%;
+  }
 
   > main {
     @include type;
