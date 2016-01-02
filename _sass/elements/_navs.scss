@@ -81,6 +81,7 @@ nav {
           display: block;
           text-decoration: none;
           width: 100%;
+          transition: border 0.2s, padding 0.1s;
 
           &:hover,
           &:focus {
