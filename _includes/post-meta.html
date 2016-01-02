@@ -1,7 +1,13 @@
 {% assign post = include.post %}
-{{ post.date | date: "%b %-d, %Y" }}
+<i class="fa fa-calendar fa-fw"></i> {{ post.date | date: "%b %-d, %Y" }}
 {% if post.author %}
-  • {{ post.author }}
+  • <i class="fa fa-user fa-fw"></i> {{ post.author }}
+{% endif %}
+{% if post.category %}
+  • <i class="fa fa-folder fa-fw"></i> {{ post.category }}
+{% endif %}
+{% if post.tags %}
+  • <i class="fa fa-tags fa-fw"></i> {{ post.tags | join: ', ' }}
 {% endif %}
 {% if post.meta %}
   • {{ post.meta }}

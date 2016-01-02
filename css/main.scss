@@ -39,6 +39,14 @@ a {
   }
 }
 
+.post-list {
+  > article {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #888;
+    padding-bottom: 1rem;
+  }
+}
+
 .container {
   @include container;
   margin: 1rem auto;
