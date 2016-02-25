@@ -33,5 +33,4 @@ page_template: page
 draft_template: draft
 
 # Build settings
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
