@@ -15,6 +15,9 @@ Yep! Justing is an avid Rubyist, but he also can churn out JavaScript, CoffeeScr
 ### But what has he done?
 Glad you asked! Justing has done a bunch of stuff.
 
+### I suddenly feel the need to throw all of my money at this guy!
+No, don't do that. Stop. Justing isn't that special. But I mean if you _really really want to_... here's my [Amazon wishlist](http://amzn.com/w/23R9C0S01Q1VL)! I guess you can send money.... [if you want.......](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=saps%2elaj%40gmail%2ecom&lc=US&item_name=donate%20all%20your%20%24%24%24%24%20to%20sapslaj%20cuz%20hes%20a%20good%20guy&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHostedGuest) 
+
 ## About the blag
 Now, the interesting part: Jekyll site hosted on GitHub with custom skin. Search is client-side lunr.js. Octopress running under the hood.
 
