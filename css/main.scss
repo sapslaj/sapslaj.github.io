@@ -41,6 +41,11 @@ a {
   }
 }
 
+hr {
+  margin: 1rem;
+  border-bottom: 1px solid $nav-background-color;
+}
+
 .post-list {
   > article {
     margin-bottom: 2rem;
