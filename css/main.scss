@@ -9,7 +9,10 @@
 @import "vendor/sanitize";
 @import "vendor/guff";
 
+@import "elements/container";
+@import "elements/images";
 @import "elements/navs";
+@import "elements/post-list";
 @import "elements/articles";
 @import "elements/asides";
 @import "elements/search";
@@ -44,56 +47,4 @@ a {
 hr {
   margin: 1rem;
   border-bottom: 1px solid $nav-background-color;
-}
-
-.post-list {
-  > article {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #888;
-    padding-bottom: 1rem;
-  }
-}
-
-.container {
-  width: 100%;
-  margin: 1rem auto;
-  padding: 0 1rem;
-  @include clear;
-
-  @include breakpoint($desktop) {
-    width: 85%;
-  }
-
-  > main {
-    @include type;
-
-    @include breakpoint($desktop) {
-      @include col(8);
-    }
-
-    p,
-    pre,
-    code,
-    .highlight {
-      margin-bottom: 1.5rem;
-
-      pre,
-      code {
-        margin-bottom: 0;
-      }
-    }
-
-    .post-list-header {
-      border-bottom: 1px solid #aaa;
-    }
-  }
-
-  > aside {
-    border-top: 2px solid #999;
-
-    @include breakpoint($desktop) {
-      @include col(4);
-      border: 0;
-    }
-  }
 }
